@@ -28,6 +28,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Smallish blog"
+      href="/blog/feed.xml"
+    />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -45,7 +52,8 @@
         </a>
         <nav aria-label="Main navigation">
           <a href="#projects">Projects</a>
-          <a href="#about">The idea</a>
+          <a href="/blog/">Blog</a>
+          <a class="nav-about" href="#about">The idea</a>
           <a
             class="nav-github"
             href="https://github.com/rahuldave/smallish.dev"
@@ -180,6 +188,47 @@
           </article>
         </section>
 
+        <section class="home-journal" aria-labelledby="journal-title">
+          <div class="section-heading">
+            <h2 id="journal-title">From the blog</h2>
+            <a class="quiet-link" href="/blog/"
+              >All notes <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <a
+            class="story-card"
+            href="/blog/smalldocs/"
+            aria-labelledby="smalldocs-story-title"
+            ><div class="story-image">
+              <img
+                src="/assets/blog/smalldocs/tufte-margins.jpg"
+                width="1440"
+                height="960"
+                alt="Tufte side notes and a figure caption beside a chart in SmallDocs"
+                loading="lazy"
+              />
+            </div>
+            <div class="story-copy">
+              <p class="story-meta">
+                <span>01 / PROJECT NOTES</span
+                ><time datetime="2026-10-16">October 16, 2026</time>
+              </p>
+              <h2 id="smalldocs-story-title">
+                SmallDocs: a smaller way to publish<span class="title-dot"
+                  >.</span
+                >
+              </h2>
+              <p>
+                From Markdown and notebooks to a website. A first look at
+                SmallDocs, its themes, and the Tufte margins that put notes
+                beside the text.
+              </p>
+              <span class="story-read"
+                >Read the story <span aria-hidden="true">↗</span></span
+              >
+            </div></a
+          >
+        </section>
         <section class="directions" aria-labelledby="directions-title">
           <div class="directions-intro">
             <p class="eyebrow">A little further out</p>
@@ -234,15 +283,19 @@
 
       <footer class="site-footer">
         <p>
-          Smallish<span class="footer-dot">.</span>
-          <span class="footer-note"
+          Smallish<span class="footer-dot">.</span
+          ><span class="footer-note"
             >A workbench by
             <a href="https://rahuldave.com/">Rahul Dave</a>.</span
           >
         </p>
-        <a href="https://github.com/rahuldave/smallish.dev"
-          >Find us on GitHub <span aria-hidden="true">↗</span></a
-        >
+        <nav aria-label="Footer navigation">
+          <a href="/blog/">Blog</a><a href="/blog/feed.xml">RSS</a
+          ><a href="/#about">The idea</a
+          ><a href="https://github.com/rahuldave/smallish.dev"
+            >GitHub <span aria-hidden="true">↗</span></a
+          >
+        </nav>
       </footer>
     </div>
   </body>
