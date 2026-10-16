@@ -6,10 +6,10 @@ serve port="8766":
     python3 -m http.server {{port}} --bind 127.0.0.1
 
 fmt:
-    npx --yes prettier@3.6.2 --write index.html styles.css README.md AGENTS.md
+    npx --yes prettier@3.6.2 --write "**/*.html" "*.css" "**/*.md"
 
 format-check:
-    npx --yes prettier@3.6.2 --check index.html styles.css README.md AGENTS.md
+    npx --yes prettier@3.6.2 --check "**/*.html" "*.css" "**/*.md"
 
 diff-check:
     git diff --check
