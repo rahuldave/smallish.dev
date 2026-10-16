@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ed" />
+    <title>SmallDocs: a smaller way to publish — Smallish</title>
+    <meta
+      name="description"
+      content="A Python website generator with Quarto conventions, 25 Bootswatch themes, and a Tufte theme that brings side notes and figure captions into the margin."
+    />
+    <link rel="canonical" href="https://smallish.dev/blog/smalldocs/" />
+    <meta
+      property="og:title"
+      content="SmallDocs: a smaller way to publish — Smallish"
+    />
+    <meta
+      property="og:description"
+      content="A Python website generator with Quarto conventions, 25 Bootswatch themes, and a Tufte theme that brings side notes and figure captions into the margin."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://smallish.dev/blog/smalldocs/" />
+    <meta
+      property="og:image"
+      content="https://smallish.dev/assets/blog/smalldocs/tufte-margins.jpg"
+    />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="960" />
+    <meta
+      property="og:image:alt"
+      content="The SmallDocs Tufte demo with side notes and a figure caption in the margin"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Smallish blog"
+      href="/blog/feed.xml"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/blog.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "SmallDocs: a smaller way to publish",
+        "description": "A Python website generator with Quarto conventions, 25 Bootswatch themes, and a Tufte theme that brings side notes and figure captions into the margin.",
+        "datePublished": "2026-10-16",
+        "dateModified": "2026-10-16",
+        "author": {
+          "@type": "Person",
+          "name": "Rahul Dave",
+          "url": "https://rahuldave.com/"
+        },
+        "mainEntityOfPage": "https://smallish.dev/blog/smalldocs/",
+        "image": [
+          "https://smallish.dev/assets/blog/smalldocs/tufte-margins.jpg"
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Smallish",
+          "url": "https://smallish.dev/"
+        }
+      }
+    </script>
+    <meta property="article:published_time" content="2026-10-16" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="/" aria-label="Smallish home"
+          ><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path
+              d="M3 3h11v11H3zM18 3h11v11H18zM3 18h11v11H3z"
+              fill="currentColor"
+            />
+            <circle cx="23.5" cy="23.5" r="5.5" fill="currentColor" /></svg
+          >smallish<span class="wordmark-tld">.dev</span></a
+        >
+        <nav aria-label="Main navigation">
+          <a href="/#projects">Projects</a
+          ><a class="is-current" href="/blog/">Blog</a
+          ><a class="nav-about" href="/#about">The idea</a
+          ><a
+            class="nav-github"
+            href="https://github.com/rahuldave/smallish.dev"
+            aria-label="Smallish on GitHub"
+            >GitHub <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </header>
+      <main id="main">
+        <article class="post">
+          <header class="post-header">
+            <a class="post-back" href="/blog/">← All notes</a>
+            <p class="eyebrow">01 / PROJECT NOTES</p>
+            <h1>
+              SmallDocs:<br /><em
+                >a smaller way<br class="title-break" />
+                to publish.</em
+              >
+            </h1>
+            <p class="post-deck">
+              Markdown, notebooks, and Python API docs. Quarto conventions. And
+              themes that reach from Bootswatch to Tufte.
+            </p>
+            <p class="post-byline">
+              <a href="https://rahuldave.com/">Rahul Dave</a
+              ><span aria-hidden="true">/</span
+              ><time datetime="2026-10-16">October 16, 2026</time>
+            </p>
+          </header>
+          <figure class="post-figure post-hero">
+            <a
+              class="screenshot-link"
+              href="/assets/blog/smalldocs/tufte-margins.jpg"
+              aria-label="Open the Tufte margin-layout screenshot at full size"
+              ><img
+                src="/assets/blog/smalldocs/tufte-margins.jpg"
+                width="1440"
+                height="960"
+                alt="SmallDocs’ Tufte demo: numbered side notes, an unnumbered aside, and a chart caption sit in the right margin beside the text"
+                fetchpriority="high"
+            /></a>
+            <figcaption>
+              <span class="figure-number">01</span
+              ><span
+                >The Tufte theme, rendered by SmallDocs. Notes and a chart
+                caption sit beside the text.
+                <a
+                  href="https://rahuldave.com/smalldocs-tufte/guide/side-notes.html"
+                  >Explore the live example</a
+                >. Click any screenshot for the full-size image.</span
+              >
+            </figcaption>
+          </figure>
+          <div class="post-layout">
+            <nav class="post-toc" aria-label="In this article">
+              <p>IN THIS NOTE</p>
+              <a href="#familiar-folder">A familiar folder</a
+              ><a href="#themes">One site, many themes</a
+              ><a href="#tufte">The Tufte theme</a
+              ><a href="#margins">Notes in the margin</a
+              ><a href="#try-it">Try it</a
+              ><a href="#where-it-fits">Where it fits</a>
+            </nav>
+            <div class="post-body">
+              <p class="post-lead">
+                <a href="https://docs.smallish.dev/">SmallDocs</a> is the first
+                project on the Smallish workbench: a Python package that turns a
+                folder of pages into a website. Its starting point is the
+                material you already have—Markdown, notebooks, and the
+                configuration of a Quarto website.
+              </p>
+              <p>
+                A small project still deserves somewhere clear to explain
+                itself. A guide should have navigation. A long page should have
+                a table of contents. Code examples, figures, and API reference
+                pages should be easy to read. SmallDocs brings those pieces
+                together in a website generator you can install with Python.
+              </p>
+              <h2 id="familiar-folder">Start with a familiar folder</h2>
+              <p>
+                SmallDocs reads <code>.md</code>, <code>.qmd</code>, and
+                <code>.ipynb</code> files. A native project uses
+                <code>_smalldocs.yml</code>; an existing Quarto project can keep
+                its <code>_quarto.yml</code>. With your pages and configuration
+                in a folder called <code>docs/</code>, the basic workflow is
+                below. You need Python 3.11 or later.
+              </p>
+              <div class="code-example">
+                <p>IN YOUR TERMINAL</p>
+                <pre><code>pip install smalldocs
+smalldocs render docs
+smalldocs preview docs</code></pre>
+              </div>
+              <p>
+                The render command writes the website into
+                <code>docs/_site/</code> by default. Preview serves it locally
+                and reloads the browser when you edit. The
+                <a href="https://docs.smallish.dev/guide/get-started.html"
+                  >getting-started guide</a
+                >
+                walks through the folder and its first page.
+              </p>
+              <p>
+                The familiar structure continues inside the site: a navbar, a
+                sidebar, a table of contents, search, and links between pages.
+                There are callouts, maths, tabsets, and listings for collections
+                of pages. Python projects can generate
+                <a href="https://docs.smallish.dev/guide/api.html"
+                  >API reference pages</a
+                >
+                from code, and
+                <a href="https://docs.smallish.dev/guide/notebooks.html"
+                  >notebooks</a
+                >
+                keep their saved outputs in the published page.
+              </p>
+              <h2 id="themes">One site, many themes</h2>
+              <p>
+                Choosing a theme should be a small decision you can try and
+                revise. SmallDocs includes
+                <a href="https://docs.smallish.dev/guide/themes.html"
+                  >25 Bootswatch themes</a
+                >
+                as ready-to-use CSS. Set <code>theme: flatly</code>, for
+                example, and render again. You can also use plain Bootstrap or
+                your own CSS.
+              </p>
+              <p>
+                For a light/dark pair, name both themes. SmallDocs’ own
+                documentation uses Cosmo and Darkly:
+              </p>
+              <div class="code-example">
+                <p>IN _SMALLDOCS.YML</p>
+                <pre><code>theme:
+  light: cosmo
+  dark: darkly</code></pre>
+              </div>
+              <p>
+                On a first visit, the site follows the reader’s browser
+                preference. A switch in the navigation lets the reader choose a
+                mode, and the browser remembers that choice. In a Quarto
+                configuration, the equivalent theme setting belongs under
+                <code>format.html</code>.
+              </p>
+              <div class="figure-pair">
+                <figure class="post-figure">
+                  <a
+                    class="screenshot-link"
+                    href="/assets/blog/smalldocs/docs-light.jpg"
+                    aria-label="Open the SmallDocs Cosmo screenshot at full size"
+                    ><img
+                      src="/assets/blog/smalldocs/docs-light.jpg"
+                      width="1440"
+                      height="960"
+                      alt="The SmallDocs documentation homepage in the light Cosmo theme, with navigation and sidebars"
+                      loading="lazy"
+                  /></a>
+                  <figcaption>
+                    <span class="figure-number">02</span
+                    ><span
+                      >Cosmo, the light theme on the
+                      <a href="https://docs.smallish.dev/"
+                        >SmallDocs documentation site</a
+                      >.</span
+                    >
+                  </figcaption>
+                </figure>
+                <figure class="post-figure">
+                  <a
+                    class="screenshot-link"
+                    href="/assets/blog/smalldocs/docs-dark.jpg"
+                    aria-label="Open the SmallDocs Darkly screenshot at full size"
+                    ><img
+                      src="/assets/blog/smalldocs/docs-dark.jpg"
+                      width="1440"
+                      height="960"
+                      alt="The same SmallDocs homepage in the dark Darkly theme, with the page structure preserved"
+                      loading="lazy"
+                  /></a>
+                  <figcaption>
+                    <span class="figure-number">03</span
+                    ><span
+                      >The same page in Darkly. The content and navigation stay
+                      in place.</span
+                    >
+                  </figcaption>
+                </figure>
+              </div>
+              <p>
+                The theme supplies the colours and typography; SmallDocs
+                supplies the page structure. That separation also makes room for
+                a more distinctive theme.
+              </p>
+              <h2 id="tufte">The Tufte theme</h2>
+              <p>
+                <a href="https://github.com/rahuldave/smalldocs-tufte"
+                  >smalldocs-tufte</a
+                >
+                is a theme extension for both SmallDocs and Quarto. It takes its
+                visual language from
+                <a href="https://edwardtufte.github.io/tufte-css/">Tufte CSS</a
+                >: ET Book type, a warm paper background, a measured text
+                column, and restrained rules and links. The extension also
+                includes a dark mode.
+              </p>
+              <p>
+                It suits pages that ask for close reading: an explanation with
+                figures, a technical note, or an essay whose asides belong near
+                the sentence they qualify. The type gives the page a bookish
+                character while the navigation still works like a website.
+              </p>
+              <div class="figure-pair">
+                <figure class="post-figure">
+                  <a
+                    class="screenshot-link"
+                    href="/assets/blog/smalldocs/tufte-light.jpg"
+                    aria-label="Open the light Tufte screenshot at full size"
+                    ><img
+                      src="/assets/blog/smalldocs/tufte-light.jpg"
+                      width="1440"
+                      height="960"
+                      alt="The Tufte demo homepage in light mode, with ET Book type, italic headings, and a cream background"
+                      loading="lazy"
+                  /></a>
+                  <figcaption>
+                    <span class="figure-number">04</span
+                    ><span
+                      >The
+                      <a href="https://rahuldave.com/smalldocs-tufte/"
+                        >live Tufte demo</a
+                      >
+                      in light mode.</span
+                    >
+                  </figcaption>
+                </figure>
+                <figure class="post-figure">
+                  <a
+                    class="screenshot-link"
+                    href="/assets/blog/smalldocs/tufte-dark.jpg"
+                    aria-label="Open the dark Tufte screenshot at full size"
+                    ><img
+                      src="/assets/blog/smalldocs/tufte-dark.jpg"
+                      width="1440"
+                      height="960"
+                      alt="The same Tufte homepage in dark mode, retaining its serif type, narrow text column, and italic headings"
+                      loading="lazy"
+                  /></a>
+                  <figcaption>
+                    <span class="figure-number">05</span
+                    ><span
+                      >Tufte’s dark mode keeps the same typography and
+                      layout.</span
+                    >
+                  </figcaption>
+                </figure>
+              </div>
+              <h2 id="margins">Put notes beside the argument</h2>
+              <p>
+                The margin is useful space. In the example at the top of this
+                post, numbered footnotes sit beside the paragraph that cites
+                them. An unnumbered note adds context, and the chart’s caption
+                sits beside the chart. The reader can move between the
+                explanation and its supporting material without jumping to the
+                bottom of the page.
+              </p>
+              <p>
+                SmallDocs implements the layout; the Tufte extension gives it
+                the theme’s appearance. Set
+                <code>reference-location: margin</code> to place footnotes
+                beside the text, or <code>fig-cap-location: margin</code> for
+                figure captions. A <code>.column-margin</code> div holds an
+                unnumbered note, and an <code>.aside</code> span adds a short
+                aside. Wider figures can use <code>.column-page</code>.
+              </p>
+              <p>
+                These are Quarto-style conventions, so the source stays readable
+                as ordinary Markdown. On a narrow screen the notes follow the
+                relevant text instead of being squeezed into a side column. The
+                <a
+                  href="https://rahuldave.com/smalldocs-tufte/guide/side-notes.html"
+                  >side-notes demo</a
+                >
+                shows the result; the
+                <a
+                  href="https://docs.smallish.dev/guide/markdown.html#the-margin-and-wide-content"
+                  >margin and wide-content guide</a
+                >
+                explains the markup.
+              </p>
+              <h2 id="try-it">Try Tufte in your project</h2>
+              <p>
+                From the parent of your <code>docs/</code> folder, add the
+                extension. This step needs Git; the public HTTPS URL works
+                without an SSH key:
+              </p>
+              <div class="code-example">
+                <p>IN YOUR TERMINAL</p>
+                <pre><code>smalldocs add https://github.com/rahuldave/smalldocs-tufte.git --dir docs</code></pre>
+              </div>
+              <p>
+                Then use it in <code>docs/_smalldocs.yml</code>. The extension
+                supplies both its light and dark stylesheets:
+              </p>
+              <div class="code-example">
+                <p>IN DOCS/_SMALLDOCS.YML</p>
+                <pre><code>theme: tufte
+reference-location: margin
+fig-cap-location: margin</code></pre>
+              </div>
+              <p>
+                The command copies the extension into
+                <code>docs/_extensions/tufte/</code>. Keep that folder with your
+                project so future builds use the same theme. SmallDocs uses the
+                extension’s compiled CSS and font assets; it does not need a
+                Sass compiler to render the site. See the
+                <a
+                  href="https://docs.smallish.dev/guide/themes.html#a-theme-from-a-git-repository"
+                  >theme-extension guide</a
+                >
+                for the supported sources and update commands.
+              </p>
+              <p>
+                The same extension repository also supports Quarto through its
+                <code>tufte-html</code> format. The
+                <a
+                  href="https://rahuldave.com/smalldocs-tufte/guide/install.html"
+                  >installation guide</a
+                >
+                gives the settings for each tool.
+              </p>
+              <h2 id="where-it-fits">Keep the scope clear</h2>
+              <p>
+                SmallDocs builds websites. It shows the outputs already saved in
+                a notebook, and it does not execute notebook cells during a
+                render. Keep execution in your notebook workflow. If you need
+                PDF, Word, slides, or other Quarto capabilities, choose the tool
+                that handles those requirements. The
+                <a href="https://docs.smallish.dev/guide/from-quarto.html"
+                  >Quarto compatibility guide</a
+                >
+                describes the boundaries, and
+                <code>smalldocs render docs --strict</code> makes a warning fail
+                the build.
+              </p>
+              <p>
+                For a guide, a project site, or a collection of technical notes,
+                SmallDocs offers a practical starting point: familiar files, a
+                Python install, and a choice of reading styles. Start with the
+                page you want someone to read, then choose the theme that serves
+                it.
+              </p>
+              <aside class="post-next" aria-labelledby="start-small-title">
+                <p class="eyebrow">ON YOUR WORKBENCH</p>
+                <h2 id="start-small-title">Make a small site of your own.</h2>
+                <p>
+                  <a href="https://docs.smallish.dev/guide/get-started.html"
+                    >Start with the guide</a
+                  >,
+                  <a href="https://github.com/rahuldave/smalldocs"
+                    >read the SmallDocs source</a
+                  >, or
+                  <a href="https://rahuldave.com/smalldocs-tufte/"
+                    >explore the Tufte demo</a
+                  >.
+                </p>
+              </aside>
+              <div class="post-credits">
+                <p>
+                  All five screenshots were captured from the live SmallDocs
+                  documentation and Tufte demo on October 16, 2026. The Tufte
+                  extension credits
+                  <a href="https://github.com/rahuldave/smalldocs-tufte#credits"
+                    >Tufte CSS, ET Book, and Bootstrap</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+      <footer class="site-footer">
+        <p>
+          Smallish<span class="footer-dot">.</span
+          ><span class="footer-note"
+            >A workbench by
+            <a href="https://rahuldave.com/">Rahul Dave</a>.</span
+          >
+        </p>
+        <nav aria-label="Footer navigation">
+          <a href="/blog/">Blog</a><a href="/blog/feed.xml">RSS</a
+          ><a href="/#about">The idea</a
+          ><a href="https://github.com/rahuldave/smallish.dev"
+            >GitHub <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
