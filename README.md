@@ -17,6 +17,9 @@ just verify
 Open `http://127.0.0.1:8766/`. Check desktop and mobile layouts after visual changes.
 The one-page navigation should reach Projects, SmallDocs, and The idea. The public
 SmallDocs links point to its existing documentation and repository.
+The docs card in the hero links to the docs-project area at `#docs`. Keep that
+anchor when adding more docs projects, and check the card with both a click and
+the keyboard.
 
 ## Publishing
 
