@@ -247,6 +247,17 @@ h1 em {
   z-index: 4;
   transform: rotate(-4deg);
   background: #e9eddf;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+.sheet-docs:hover,
+.sheet-docs:focus-visible {
+  transform: translateY(-4px) rotate(-4deg);
+  border-color: var(--green);
+  background: var(--light-green);
 }
 .sheet-data {
   z-index: 3;
