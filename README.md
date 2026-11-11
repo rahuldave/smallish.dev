@@ -1,34 +1,58 @@
 # Smallish
 
-A small, buildless landing page for [smallish.dev](https://smallish.dev/).
-Plain HTML and CSS; no application JavaScript, framework, or runtime dependencies.
+The landing page for [smallish.dev](https://smallish.dev/) uses plain HTML and
+CSS. It has no build step, application JavaScript, framework, or runtime
+dependencies.
 
 ## Local work
 
-Requirements: Python 3, Node/npm (for the pinned on-demand formatter), Just,
-and GitHub CLI for deployment.
+Requirements:
+
+- Python 3 to serve the site.
+- Node.js and npm to run the pinned formatter on demand.
+- Just, the `just` command runner, to run the commands below.
+- GitHub CLI to request a Pages build with `just deploy`.
+
+Clone or download this repository. Run the commands below from the repository
+folder.
+
+Start a local server:
 
 ```sh
 just serve 8766
+```
+
+Open `http://127.0.0.1:8766/`. After visual changes, check the desktop and mobile
+layouts.
+
+Before you publish, format the files and check them:
+
+```sh
 just fmt
 just verify
 ```
 
-Open `http://127.0.0.1:8766/`. Check desktop and mobile layouts after visual changes.
-The one-page navigation should reach Projects, SmallDocs, and The idea. The public
-SmallDocs links point to its documentation, the Elegant theme comparison, installation and update instructions, the theme handbook with optional effects, both assessments, both principles guides, and its repository.
-The docs card in the hero links to the docs-project area at `#docs`. Keep that
-anchor when adding more docs projects, and check the card with both a click and
-the keyboard.
+Check the page links to Projects, SmallDocs, and The idea. Then check the
+SmallDocs links to:
 
-## Publishing
+- SmallDocs documentation and its source repository.
+- The Elegant theme comparison for SmallDocs, with instructions for theme installation and updates.
+- The theme handbook, including optional effects.
+- The typography and UI design assessments, and the two matching principles guides.
 
-GitHub Pages publishes the root of `main` in `rahuldave/smallish.dev`.
-The `CNAME` file sets `smallish.dev` as the canonical domain. `.nojekyll` keeps
-the source files static. A push to `main` triggers publication; `just deploy`
-can explicitly request a fresh build after the push.
+The "words into websites" card links to the documentation projects at `#docs`. If
+you add more documentation projects, keep that anchor. Check that you can follow the
+card link with both a click and the keyboard.
 
-DNS is managed at Porkbun. The intended records are:
+## Publish the site
+
+GitHub Pages publishes the files at the root of `main` in
+`rahuldave/smallish.dev`. The `CNAME` file sets `smallish.dev` as the canonical
+domain, and `.nojekyll` keeps the source files static. A push to `main` publishes
+the site. After the push, you can run `just deploy` to request a fresh build.
+
+Porkbun manages the DNS records that point the domain to GitHub Pages. The
+intended records are:
 
 | Type  | Host | Value               |
 | ----- | ---- | ------------------- |
@@ -38,11 +62,11 @@ DNS is managed at Porkbun. The intended records are:
 | A     | @    | 185.199.111.153     |
 | CNAME | www  | rahuldave.github.io |
 
-Keep the repository's Pages custom domain and DNS records in sync. Enable
-GitHub Pages HTTPS enforcement after GitHub issues the certificate. There is
-no wildcard DNS record: future project subdomains can be added individually.
+Keep the repository's Pages custom domain and DNS records in sync. Keep HTTPS
+enforcement enabled in GitHub Pages. There is no wildcard DNS record. Add future
+project subdomains individually.
 
-## Editing
+## Site files
 
 - `index.html`: content, navigation, and metadata.
 - `styles.css`: responsive layout, colors, type, and reduced-motion support.
