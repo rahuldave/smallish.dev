@@ -40,6 +40,10 @@ SmallDocs links to:
 - The theme handbook, including optional effects.
 - The typography and UI design assessments, and the two matching principles guides.
 
+Check the smallish dev links to its documentation at `dev.smallish.dev`, its
+fresh-folder page, its source repository, and the site of each tool of the stack.
+The "tools for agents that ship code" card links to `#dev`.
+
 The "words into websites" card links to the documentation projects at `#docs`. If
 you add more documentation projects, keep that anchor. Check that you can follow the
 card link with both a click and the keyboard.

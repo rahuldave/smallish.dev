@@ -244,7 +244,7 @@ h1 em {
   color: var(--green);
 }
 .sheet-docs {
-  z-index: 4;
+  z-index: 5;
   transform: rotate(-4deg);
   background: #e9eddf;
   text-decoration: none;
@@ -259,10 +259,28 @@ h1 em {
   border-color: var(--green);
   background: var(--light-green);
 }
+.sheet-dev {
+  z-index: 4;
+  margin-top: -8px;
+  transform: translateX(8px) rotate(1deg);
+  background: #e9eddf;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+.sheet-dev:hover,
+.sheet-dev:focus-visible {
+  z-index: 6;
+  transform: translateX(8px) translateY(-4px) rotate(1deg);
+  border-color: var(--green);
+  background: var(--light-green);
+}
 .sheet-data {
   z-index: 3;
   margin-top: -8px;
-  transform: translateX(8px) rotate(1deg);
+  transform: translateX(-3px) rotate(-1deg);
 }
 .sheet-ml {
   z-index: 2;
@@ -302,6 +320,9 @@ h1 em {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.8px;
+}
+.featured-project + .featured-project {
+  margin-top: 30px;
 }
 .featured-project {
   display: grid;
