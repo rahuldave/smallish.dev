@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ed" />
+    <title>Blog — Smallish</title>
+    <meta
+      name="description"
+      content="Notes on small tools, practical workflows, and the choices behind them. Start with SmallDocs and its Tufte theme."
+    />
+    <link rel="canonical" href="https://smallish.dev/blog/" />
+    <meta property="og:title" content="Blog — Smallish" />
+    <meta
+      property="og:description"
+      content="Notes on small tools, practical workflows, and the choices behind them. Start with SmallDocs and its Tufte theme."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://smallish.dev/blog/" />
+    <meta
+      property="og:image"
+      content="https://smallish.dev/assets/blog/smalldocs/tufte-margins.jpg"
+    />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="960" />
+    <meta
+      property="og:image:alt"
+      content="The SmallDocs Tufte demo with side notes and a figure caption in the margin"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Smallish blog"
+      href="/blog/feed.xml"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/blog.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="/" aria-label="Smallish home"
+          ><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path
+              d="M3 3h11v11H3zM18 3h11v11H18zM3 18h11v11H3z"
+              fill="currentColor"
+            />
+            <circle cx="23.5" cy="23.5" r="5.5" fill="currentColor" /></svg
+          >smallish<span class="wordmark-tld">.dev</span></a
+        >
+        <nav aria-label="Main navigation">
+          <a href="/#projects">Projects</a
+          ><a class="is-current" href="/blog/" aria-current="page">Blog</a
+          ><a class="nav-about" href="/#about">The idea</a
+          ><a
+            class="nav-github"
+            href="https://github.com/rahuldave/smallish.dev"
+            aria-label="Smallish on GitHub"
+            >GitHub <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </header>
+      <main id="main">
+        <header class="blog-intro">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>THE SMALLISH BLOG
+          </p>
+          <h1>Notes from<br /><em>the workbench.</em></h1>
+          <p>
+            Tools we’re building, choices we’re making, and a closer look at how
+            the pieces work.
+          </p>
+        </header>
+        <section class="blog-stories" aria-labelledby="latest-title">
+          <div class="section-heading">
+            <h2 id="latest-title">The latest</h2>
+            <a class="quiet-link" href="/blog/feed.xml"
+              >Follow by RSS <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <a
+            class="story-card"
+            href="/blog/smalldocs/"
+            aria-labelledby="smalldocs-story-title"
+            ><div class="story-image">
+              <img
+                src="/assets/blog/smalldocs/tufte-margins.jpg"
+                width="1440"
+                height="960"
+                alt="Tufte side notes and a figure caption beside a chart in SmallDocs"
+                loading="lazy"
+              />
+            </div>
+            <div class="story-copy">
+              <p class="story-meta">
+                <span>01 / PROJECT NOTES</span
+                ><time datetime="2026-10-16">October 16, 2026</time>
+              </p>
+              <h2 id="smalldocs-story-title">
+                SmallDocs: a smaller way to publish<span class="title-dot"
+                  >.</span
+                >
+              </h2>
+              <p>
+                From Markdown and notebooks to a website. A first look at
+                SmallDocs, its themes, and the Tufte margins that put notes
+                beside the text.
+              </p>
+              <span class="story-read"
+                >Read the story <span aria-hidden="true">↗</span></span
+              >
+            </div></a
+          >
+        </section>
+        <aside class="blog-colophon">
+          <span class="colophon-mark" aria-hidden="true">✳</span>
+          <p>A small beginning. More notes will find their place here.</p>
+        </aside>
+      </main>
+      <footer class="site-footer">
+        <p>
+          Smallish<span class="footer-dot">.</span
+          ><span class="footer-note"
+            >A workbench by
+            <a href="https://rahuldave.com/">Rahul Dave</a>.</span
+          >
+        </p>
+        <nav aria-label="Footer navigation">
+          <a href="/blog/">Blog</a><a href="/blog/feed.xml">RSS</a
+          ><a href="/#about">The idea</a
+          ><a href="https://github.com/rahuldave/smallish.dev"
+            >GitHub <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
